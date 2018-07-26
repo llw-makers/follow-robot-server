@@ -1,7 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import Busboy from 'busboy';
-import config from '../config.json';
 import path from 'path';
 import crypto from 'crypto';
 import fs from 'fs';
@@ -9,6 +8,8 @@ import mime from 'mime';
 import os from 'os';
 import util from 'util';
 import AdmZip from 'adm-zip';
+
+let config = JSON.parse(fs.readFileSync(path.join(__dirname, "../config.json"), {encoding: "utf8"}));
 
 let app = express();
 

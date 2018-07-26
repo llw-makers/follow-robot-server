@@ -1,0 +1,28 @@
+{
+  "name": "follow-robot-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "build:prod": "tsc --prod",
+    "build:serve": "npm run build && npm run serve",
+    "serve": "dist/server.js",
+    "start": "npm run serve"
+  },
+  "author": "anli5005",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^10.5.3",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.11",
+    "body-parser": "^1.18.3",
+    "busboy": "^0.2.14",
+    "express": "^4.16.3",
+    "mime-types": "^2.1.19"
+  }
+}
